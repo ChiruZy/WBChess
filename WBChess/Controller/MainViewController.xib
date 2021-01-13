@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="modeButton" destination="Ha6-lR-pK3" id="EwZ-Kc-DnJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q1e-1H-ts3">
+                    <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+                </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vT-Rg-3PZ">
+                    <rect key="frame" x="535" y="0.0" width="10" height="162"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="KWc-Nv-Zoi"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黑白棋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-JG-jw0">
+                    <rect key="frame" x="431.5" y="162" width="217" height="86"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="7JW-Dg-kwP">
+                    <rect key="frame" x="480" y="603" width="120" height="147"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGP-Hx-KuW">
+                            <rect key="frame" x="35.5" y="0.0" width="49" height="30"/>
+                            <state key="normal" title="AI 对战"/>
+                            <connections>
+                                <action selector="startGameWithAI:" destination="-1" eventType="touchUpInside" id="KmC-TQ-BLB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLF-kb-nZJ">
+                            <rect key="frame" x="29" y="39" width="62" height="30"/>
+                            <state key="normal" title="双人游戏"/>
+                            <connections>
+                                <action selector="startGame:" destination="-1" eventType="touchUpInside" id="rhR-kP-GnL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-lR-pK3">
+                            <rect key="frame" x="6" y="78" width="108" height="30"/>
+                            <state key="normal" title="选择难度：简单"/>
+                            <connections>
+                                <action selector="changeMode:" destination="-1" eventType="touchUpInside" id="aBw-0m-6N4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-k3-66z">
+                            <rect key="frame" x="44.5" y="117" width="31" height="30"/>
+                            <state key="normal" title="其他"/>
+                            <connections>
+                                <action selector="option:" destination="-1" eventType="touchUpInside" id="Ce2-sV-fcv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="w2N-11-uV4"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By Chen Zeyu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-St-zIr">
+                    <rect key="frame" x="917" y="0.0" width="163" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mZP-St-zIr" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="4RH-bZ-Q3t"/>
+                <constraint firstItem="4Q5-JG-jw0" firstAttribute="top" secondItem="6vT-Rg-3PZ" secondAttribute="bottom" id="5RN-3H-jOl"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Q1e-1H-ts3" secondAttribute="bottom" id="FWR-Hu-mPV"/>
+                <constraint firstItem="6vT-Rg-3PZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V37-e0-jIj"/>
+                <constraint firstItem="6vT-Rg-3PZ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="bLK-jL-rlX"/>
+                <constraint firstItem="Q1e-1H-ts3" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="fTm-Vw-Chh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Q1e-1H-ts3" secondAttribute="trailing" id="m70-YM-Gy9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="7JW-Dg-kwP" secondAttribute="bottom" constant="60" id="r4Y-ro-xNx"/>
+                <constraint firstItem="6vT-Rg-3PZ" firstAttribute="height" secondItem="Q1e-1H-ts3" secondAttribute="height" multiplier="0.2" id="tkh-bv-eOb"/>
+                <constraint firstItem="7JW-Dg-kwP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="v9r-aY-Oxv"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="mZP-St-zIr" secondAttribute="trailing" id="vhe-yQ-9Ua"/>
+                <constraint firstItem="4Q5-JG-jw0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vjo-YH-SG5"/>
+                <constraint firstItem="Q1e-1H-ts3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="wrG-3O-U69"/>
+            </constraints>
+            <point key="canvasLocation" x="-675" y="169.62962962962962"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
